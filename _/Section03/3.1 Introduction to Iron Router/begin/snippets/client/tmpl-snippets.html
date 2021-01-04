@@ -1,0 +1,13 @@
+<template name="snippets">
+  <div class="container">
+    {{#each snippets}}
+     {{#if isLink}}
+     <a href={{URL}}>
+      <div class="snippet">{{text}}</div>
+    </a>
+    {{else}}
+    <div class="snippet">{{text}}</div>
+    {{/if}}
+    {{/each}}
+  </div>
+</template>

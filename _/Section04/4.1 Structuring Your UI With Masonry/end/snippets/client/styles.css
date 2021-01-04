@@ -1,0 +1,13 @@
+#txtAdd {
+  width:40rem;
+}
+
+.snippet {
+  width: 250px;
+  height: 250px;
+  
+}
+
+.bordered {
+  border: 2px solid #ccc;
+}

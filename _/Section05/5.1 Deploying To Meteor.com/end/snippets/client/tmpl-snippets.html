@@ -1,0 +1,32 @@
+<template name="snippets">
+  <div class="container">
+    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=4 transitionDuration='0.1s'}}
+    {{#each snippets}}
+    {{> snippet}}
+    {{/each}}
+    {{/masonryContainer}}
+  </div>
+</template>
+
+
+<template name="snippet">
+ {{#masonryElement 'MasonryContainer'}}
+ <div class="snippet panel panel-success">
+ <div class="panel-heading">
+   <h3 class="panel-title">{{text}}</h3>
+ </div>
+ <div class="panel-body desc">
+  {{#if editing}}
+    <textarea name="description" rows="3" class="form-control editing" value={{desc}}></textarea>
+  {{else}}
+   {{desc}}
+  {{/if}}
+ </div>
+  {{#if isLink}}
+  <div class="panel-body">
+  <a href={{URL}} class="btn btn-large btn-info">Link</a>
+   </div>
+  {{/if}}
+  </div>
+  {{/masonryElement}}
+</template>

@@ -1,0 +1,31 @@
+<template name ="toolbar">
+ <div class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Snippets</a>
+    <button type="button" class="navbar-toggle collapsed" 
+            data-toggle="collapse" 
+            data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+     <li>
+       <div class="navbar-form navbar-left">
+         <div class="form-group">
+           <input type="text"
+           id="txtAdd"
+           class="form-control"
+           placeholder="Add snippet...">
+         </div>
+         <button id="btnAdd" class="btn btn-info">Add</button>
+       </div>
+     </li>
+      {{> loginButtons}} <!-- here -->
+    </ul>
+  </div>
+</div>
+</template>

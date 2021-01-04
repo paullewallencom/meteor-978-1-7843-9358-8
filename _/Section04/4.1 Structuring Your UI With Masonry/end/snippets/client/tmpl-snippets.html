@@ -1,0 +1,22 @@
+<template name="snippets">
+  <div class="container">
+   {{#masonryContainer id='MasonryContainer' columWidth=25 transitionDuration='0.1s'}}
+    {{#each snippets}}
+    {{> snippet}}
+    {{/each}}
+    {{/masonryContainer}}
+  </div>
+</template>
+
+
+<template name="snippet">
+ {{#masonryElement 'MasonryContainer'}}
+  {{#if isLink}}
+  <a href={{URL}}>
+    <div class="snippet bordered">{{text}}</div>
+  </a>
+  {{else}}
+  <div class="snippet bordered">{{text}}</div>
+  {{/if}}
+  {{/masonryElement}}
+</template>
